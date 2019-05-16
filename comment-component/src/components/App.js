@@ -5,8 +5,8 @@ import CommentBox from 'components/CommentBox';
 export default () => {
   return (
     <div>
-      <CommentList />
       <CommentBox />
+      <CommentList />
     </div>
   );
 };
