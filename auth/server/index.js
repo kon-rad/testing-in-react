@@ -4,6 +4,7 @@ const bodyParser = require('body-parser'); // middleware used to parse incoming 
 const morgan = require('morgan'); // morgan is a logging framework
 const mongoose = require('mongoose');
 const router = require('./router');
+const cors = require('cors');
 const app = express();
 
 // db setup
@@ -11,6 +12,7 @@ mongoose.connect('mongodb://localhost/auth');
 
 // setup app
 app.use(morgan('combined'));
+app.use(cors());
 app.use(bodyParser.json({ type: '*/*' }));
 
 const port = process.env.PORT || 3090;
