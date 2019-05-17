@@ -30,8 +30,8 @@ class App extends Component {
     return (
       <div>
         {this.renderHeader()}
-        <Route path="/post" component={CommentBox} />
-        <Route path="/" component={CommentList} />
+        <Route exact path="/post" component={CommentBox} />
+        <Route exact path="/" component={CommentList} />
       </div>
     );
   }
